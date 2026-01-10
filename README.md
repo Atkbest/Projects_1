@@ -35,7 +35,3 @@ Experience with synthesis, clock constraints, and hardware validation
 Tools & Background
 HDL: Verilog
 Tools: Xilinx Vivado, GTKWave
-
-Architecture Exposure: RISC-V (ISA, datapath, control, basic pipelining)
-
-Coursework: Microprocessors (8085), ARM Cortex-M0+, embedded C, assembly, introductory RTOS
