@@ -1,27 +1,61 @@
-# Projects_1
-# Ayush Tiwari's Hardware & Robotics Projects
+RTL Digital Design & Computer Architecture Projects
 
-This repository aggregates my core Verilog designs and embedded‑robotics work, demonstrating digital‑logic, FSM design, and hardware prototyping skills.
+This repository contains RTL-based digital design and computer architecture projects focused on processor internals, memory systems, and timing-critical hardware blocks.
+The work emphasizes implementation-level understanding using Verilog, with attention to control logic, FSMs, dataflow, and correctness under timing constraints.
 
-## Project Listings
+Key Projects
+Direct-Mapped Cache (Verilog RTL)
 
-1. **line-follower-robot/**
-   - Mindbend 2025 technical report (`mindbend_line_follower.pdf`)
-   - Arduino code (`.ino`), circuit diagrams, flowchart
-2. **fsm_traffic_light/**
-   - `traffic.v`, `tb_traffic.v` (FSM‑based 4‑way signal controller)
-3. **lift_controller/**
-   - `lift.v`, `tb_lift.v` (FSM elevator controller)
-4. **booth_multiplier/**
-   - `booth_8bit.v`, `tb_booth_8bit.v` (8‑bit Booth algorithm)
-5. **array_multipliers/**
-   - `multiplier_8bit.v`, `tb_multiplier_8bit.v`, `multiplier_16bit.v`, `tb_multiplier_16bit.v`
-6. **axi4_stream_module/**
-   - `axi4_st.v`, `tb_axi4_st.v`
-7. **sync_fifo/**
-   - `fifo.v`, `tb_fifo.v`
-8. **adders/**
-   - **carry_lookahead_8bit/**: `CLA_8bit.v`, `tb_CLA_8bit.v`
-   - **carry_skip_16bit/**: `csa_32bit.v`, `tb_csa_32bit.v`
-   - **carry_select_16bit/**: `csa_32bit.v`, `tb_csa_32bit.v`
+Parameterized direct-mapped cache implementing tag/index/offset decoding
 
+Valid and dirty bit management
+
+FSM-based controller for hit/miss handling, write-back, and allocate operations
+
+Focus on timing correctness and control logic
+
+Testbench covers core cases; extensions in progress
+
+Asynchronous FIFO (Clock Domain Crossing)
+
+CDC-safe FIFO using Gray-coded read/write pointers
+
+Multi-flop synchronizers for pointer transfer
+
+Robust full and empty flag logic accounting for synchronization delays
+
+Synchronous FIFO
+
+FIFO buffer with pointer management and full/empty detection
+
+Studied flow control and backpressure in pipeline-style systems
+
+Line Buffer
+
+RTL line buffer for streaming data
+
+Designed for continuous data flow and pipeline-friendly timing
+
+Datapath & Arithmetic Blocks
+
+16-bit Booth multiplier (FSM-based control)
+
+Barrel shifter
+
+Structural adders: CLA (8-bit), Carry Skip (32-bit), Carry Select (32-bit)
+
+FPGA Implementation
+
+Booth multiplier synthesized and tested on Basys 3 FPGA
+
+Experience with synthesis, clock constraints, and hardware validation
+
+Tools & Background
+
+HDL: Verilog
+
+Tools: Xilinx Vivado, GTKWave
+
+Architecture Exposure: RISC-V (ISA, datapath, control, basic pipelining)
+
+Coursework: Microprocessors (8085), ARM Cortex-M0+, embedded C, assembly, introductory RTOS
