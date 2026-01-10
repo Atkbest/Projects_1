@@ -25,9 +25,7 @@ RTL line buffer for streaming data
 Designed for continuous data flow and pipeline-friendly timing
 Datapath & Arithmetic Blocks
 
-5)16-bit Booth multiplier 
-
-6)8-bit Booth Multiplier synthesized and tested on Basys 3 FPGA
+5)8-bit Booth Multiplier synthesized and tested on Basys 3 FPGA
 Experience with synthesis, clock constraints, and hardware validation
 
 6)Barrel shifter
